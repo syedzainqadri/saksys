@@ -1,0 +1,35 @@
+/* 
+---------------------------------------------
+font & reset css
+--------------------------------------------- 
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&subset=latin-ext');
+
+$font : 'Nunito', sans-serif;
+
+$light: 300;
+$normal: 400;
+$medium: 600;
+$bold: 700;
+
+
+// General Colors
+$primaryColor: #FC7E56;
+$secondaryColor: #FFF7F5;
+
+// Gradient Colors
+$gradientDark: #FC6549;
+$gradientLight: #FCA856;
+
+//Heading Color
+$headingDark: #3B566E;
+$headingLight: #ffffff;
+
+// Text Colors
+$textDark: #6F8BA4;
+$textLight: #FFF7F5;
+
+@mixin buttonShadow() {
+	box-shadow: 0 4px 5px 0 rgba(252,126,86,0.24);
+}

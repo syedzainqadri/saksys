@@ -1,0 +1,92 @@
+/* 
+---------------------------------------------
+faq
+--------------------------------------------- 
+*/
+
+.accordion {
+	background: #FFFFFF;
+	box-shadow: 0 2px 48px 0 rgba(0,0,0,0.06);
+	border-radius: 4px;
+	margin-bottom: 30px;
+
+	.accordion-item {
+		border: none;
+		background: none;
+		border-bottom: 1px solid $secondaryColor;
+
+		.accordion-header {
+			padding: 0px;
+			border: none;
+			background: none;
+			@include transition(.3s);
+
+			&:hover {
+				background: $secondaryColor;
+				padding-left: 10px;
+			}
+
+			.accordion-button {
+				width: 100%;
+				text-align: left;
+				padding: 0px;
+				padding-left: 30px;
+				padding-right: 30px;
+				@include font($normal, 15px);
+				letter-spacing: 1px;
+				color: $headingDark;
+				text-decoration: none !important;
+				@include transition(.3s);
+				cursor: pointer;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				box-shadow: none !important;
+
+				.badge {
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					line-height: 14px;
+					float: left;
+					border-radius: 100px;
+					border-top-right-radius: 0;
+					text-align: center;
+					background: $primaryColor;
+					color: #fff;
+					font-size: 12px;
+					margin-right: 20px;
+				}
+			}
+		}
+
+		.accordion-body {
+			padding: 30px;
+			padding-left: 35px;
+			padding-bottom: 16px;
+			@include font($normal, 16px);
+			color: $textDark;
+			line-height: 28px;
+			letter-spacing: 1px;
+			border-top: 1px solid #F3F8FF;
+
+			p {
+				margin-bottom: 14px;
+			}
+		}
+	}
+}
+
+@media (max-width : 991px) {
+	.accordion {
+		margin-bottom: 30px;
+		
+		.accordion-item {
+			.accordion-header {
+				.accordion-button {
+					line-height: 26px;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
