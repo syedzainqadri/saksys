@@ -19,5 +19,5 @@ gulp.task('watch', function () {
 })
 
 gulp.task('default', function () {
-    gulp.src('./html/dark-index.html', gulp.series('sass')).pipe(open());
+    gulp.src('./html/index.html', gulp.series('sass')).pipe(open());
 })
