@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
 	<title>Sakonnet - Fast & Effective Recruitment Services</title>
 	<meta name="description" content="Sakonnet - IT Solutions and Corporate template by tempload." />
 	<meta name="keywords" content="Sakonnet, startup, saas, agency, development, html, template, tempload" />
-	<meta name="author" content="tempload"/>
+	<meta name="author" content="tempload" />
 
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="assets/images/favicon/favicon.png" />
@@ -19,7 +20,36 @@
 
 	<!-- Custom CSS -->
 	<link href="assets/css/dark.css" rel="stylesheet" type="text/css">
+
+	<style>
+		.popup {
+			display: none;
+			position: top;
+			bottom: 20px;
+			padding: 20px;
+			background-color: #ffffff;
+			border: 1px solid #ddd;
+			width: 100%;
+			min-height: 250px;
+		}
+
+		/* Show the popup when the user clicks on the button */
+		.popup.show {
+			display: block;
+		}
+
+		/* Responsive styles */
+		@media (max-width: 768px) {
+			.popup {
+				width: 90%;
+				/* Adjust as needed */
+				padding: 10px;
+				/* Adjust as needed */
+			}
+		}
+	</style>
 </head>
+
 <body>
 
 	<!-- ***** Preloader Start ***** -->
@@ -30,8 +60,8 @@
 		</div>
 	</div>
 	<!-- ***** Preloader End ***** -->
-	
-	
+
+
 	<!-- ***** Header Area Start ***** -->
 	<header class="header-area">
 		<div class="container">
@@ -40,7 +70,7 @@
 					<nav class="main-nav">
 						<!-- ***** Logo Start ***** -->
 						<a href="index.html" class="logo">
-							<img src="assets/images/logo-dark.png" alt="Sakonnet"/>
+							<img src="assets/images/logo-dark.png" alt="Sakonnet" />
 						</a>
 						<!-- ***** Logo End ***** -->
 
@@ -104,17 +134,14 @@
 				<div class="row">
 					<div class="col-lg-5 col-md-12 col-sm-12">
 						<h1>Industry Leading Managed Services and Staffing <span>Solutions</span></h1>
-						<p>Proven methods to capture business priorities and goals as well as current pain points that enables measurable business outcomes.</p>
-						<button onclick="openPopup()" class="btn-primary-line">Let's Build</button>
-						
+						<p>Proven methods to capture business priorities and goals as well as current pain points that
+							enables measurable business outcomes.</p>
+						<button onclick="myFunction(event)" class="btn-primary-line">Let's Build</button>
+						<div id="myPopup" class="popup">
+							<p>Some text in the Popup..</p>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="overlay">
-			<div class="popup">
-				<h2>This is a Popup!</h2>
-				<p>Click outside to close.</p>
 			</div>
 		</div>
 		<!-- ***** Header Text End ***** -->
@@ -136,7 +163,8 @@
 				<div class="col-lg-12">
 					<div class="row">
 						<!-- ***** Features Small Item Start ***** -->
-						<div class="col-lg-3 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+						<div class="col-lg-3 col-md-6 col-sm-6 col-12"
+							data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
 							<a href="services-single.html" class="features-small-item">
 								<div class="icon">
 									<i class="fa fa-tasks"></i>
@@ -148,7 +176,8 @@
 						<!-- ***** Features Small Item End ***** -->
 
 						<!-- ***** Features Small Item Start ***** -->
-						<div class="col-lg-3 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+						<div class="col-lg-3 col-md-6 col-sm-6 col-12"
+							data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
 							<a href="services-single.html" class="features-small-item">
 								<div class="icon">
 									<i class="fa fa-briefcase"></i>
@@ -160,7 +189,8 @@
 						<!-- ***** Features Small Item End ***** -->
 
 						<!-- ***** Features Small Item Start ***** -->
-						<div class="col-lg-3 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+						<div class="col-lg-3 col-md-6 col-sm-6 col-12"
+							data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
 							<a href="services-single.html" class="features-small-item">
 								<div class="icon">
 									<i class="fa fa-video-camera"></i>
@@ -172,7 +202,8 @@
 						<!-- ***** Features Small Item End ***** -->
 
 						<!-- ***** Features Small Item Start ***** -->
-						<div class="col-lg-3 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.8s">
+						<div class="col-lg-3 col-md-6 col-sm-6 col-12"
+							data-scroll-reveal="enter bottom move 50px over 0.6s after 0.8s">
 							<a href="services-single.html" class="features-small-item">
 								<div class="icon">
 									<i class="fa fa-server"></i>
@@ -199,7 +230,9 @@
 						<h2 class="section-title">Project Base teams & Solutions</h2>
 					</div>
 					<div class="left-text">
-						<p>Our organization excels in Information Technology with diverse teams, showcasing expertise in various fields. We prioritize effectiveness and value, ensuring customer satisfaction is at the forefront.</p>
+						<p>Our organization excels in Information Technology with diverse teams, showcasing expertise in
+							various fields. We prioritize effectiveness and value, ensuring customer satisfaction is at
+							the forefront.</p>
 						<div class="row">
 							<div class="col-lg-6 col-md-6 col-sm-12">
 								<a class="btn-home active" href="services-single.html">
@@ -253,7 +286,8 @@
 					</div>
 				</div>
 				<div class="col-lg-1"></div>
-				<div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+				<div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix"
+					data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
 					<img src="assets/images/photos/features/dark-1.png" class="img-fluid d-block mx-auto" alt="App">
 				</div>
 			</div>
@@ -266,7 +300,8 @@
 	<section class="section padding-bottom-80">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+				<div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big"
+					data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
 					<img src="assets/images/photos/features/dark-2.png" class="img-fluid d-block mx-auto" alt="App">
 				</div>
 				<div class="col-lg-1"></div>
@@ -275,7 +310,8 @@
 						<h2 class="section-title">Design & Development</h2>
 					</div>
 					<div class="left-text">
-						<p>Phasellus vitae velit sit amet diam semper commodo quis quis libero. Morbi consequat arcu augue, molestie faucibus metus ullamcorper vel.</p>
+						<p>Phasellus vitae velit sit amet diam semper commodo quis quis libero. Morbi consequat arcu
+							augue, molestie faucibus metus ullamcorper vel.</p>
 						<div class="row">
 							<div class="col-lg-6 col-md-6 col-sm-12">
 								<a class="btn-home active" href="services-single.html">
@@ -383,7 +419,8 @@
 				</div>
 				<div class="offset-lg-3 col-lg-6">
 					<div class="center-text">
-						<p>Donec vulputate urna sed rutrum venenatis. Cras consequat magna quis arcu elementum, quis congue risus volutpat.</p>
+						<p>Donec vulputate urna sed rutrum venenatis. Cras consequat magna quis arcu elementum, quis
+							congue risus volutpat.</p>
 					</div>
 				</div>
 			</div>
@@ -412,7 +449,7 @@
 					</div>
 				</div>
 				<!-- ***** Team Item End ***** -->
-				
+
 				<!-- ***** Team Item Start ***** -->
 				<div class="col-lg-3 col-md-6 col-sm-12">
 					<div class="team-item">
@@ -435,7 +472,7 @@
 					</div>
 				</div>
 				<!-- ***** Team Item End ***** -->
-				
+
 				<!-- ***** Team Item Start ***** -->
 				<div class="col-lg-3 col-md-6 col-sm-12">
 					<div class="team-item">
@@ -458,7 +495,7 @@
 					</div>
 				</div>
 				<!-- ***** Team Item End ***** -->
-				
+
 				<!-- ***** Team Item Start ***** -->
 				<div class="col-lg-3 col-md-6 col-sm-12">
 					<div class="team-item">
@@ -493,7 +530,8 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="info">
-							<p>We design and develop <span>web apps</span> that delight your users and grow your business.</p>
+							<p>We design and develop <span>web apps</span> that delight your users and grow your
+								business.</p>
 							<a class="btn-white-line" href="#">Contact Us</a>
 						</div>
 					</div>
@@ -516,7 +554,8 @@
 				</div>
 				<div class="offset-lg-3 col-lg-6">
 					<div class="center-text">
-						<p>Donec vulputate urna sed rutrum venenatis. Cras consequat magna quis arcu elementum, quis congue risus volutpat.</p>
+						<p>Donec vulputate urna sed rutrum venenatis. Cras consequat magna quis arcu elementum, quis
+							congue risus volutpat.</p>
 					</div>
 				</div>
 			</div>
@@ -530,10 +569,12 @@
 						</div>
 						<div class="blog-content">
 							<h3>
-								<a href="blog-single.html">Sakonnet Expands the Leadership Team with David Lin, Controller</a>
+								<a href="blog-single.html">Sakonnet Expands the Leadership Team with David Lin,
+									Controller</a>
 							</h3>
 							<div class="text">
-								Mauris tellus sem, ultrices varius nisl at, convallis iaculis mauris. Sed eget sem vitae purus tempus dignissim.
+								Mauris tellus sem, ultrices varius nisl at, convallis iaculis mauris. Sed eget sem vitae
+								purus tempus dignissim.
 							</div>
 							<a href="blog-single.html" class="btn-primary-line">Read More</a>
 						</div>
@@ -546,10 +587,12 @@
 						</div>
 						<div class="blog-content">
 							<h3>
-								<a href="blog-single.html">Sakonnet Partners with Velocloud to Deliver Managed SD-WAN</a>
+								<a href="blog-single.html">Sakonnet Partners with Velocloud to Deliver Managed
+									SD-WAN</a>
 							</h3>
 							<div class="text">
-								Cras imperdiet faucibus sem, a dignissim urna feugiat sed. Interdum et malesuada fames ac ante ipsum.
+								Cras imperdiet faucibus sem, a dignissim urna feugiat sed. Interdum et malesuada fames
+								ac ante ipsum.
 							</div>
 							<a href="blog-single.html" class="btn-primary-line">Read More</a>
 						</div>
@@ -562,10 +605,12 @@
 						</div>
 						<div class="blog-content">
 							<h3>
-								<a href="blog-single.html">Corporate IT Solutions Adds Neva as Senior Account Executive</a>
+								<a href="blog-single.html">Corporate IT Solutions Adds Neva as Senior Account
+									Executive</a>
 							</h3>
 							<div class="text">
-								Quisque euismod nec lacus sit amet maximus. Ut convallis sagittis lorem auctor malesuada. Morbi auctor tortor eu.
+								Quisque euismod nec lacus sit amet maximus. Ut convallis sagittis lorem auctor
+								malesuada. Morbi auctor tortor eu.
 							</div>
 							<a href="blog-single.html" class="btn-primary-line">Read More</a>
 						</div>
@@ -576,14 +621,15 @@
 	</section>
 	<!-- ***** Blog End ***** -->
 
-	
+
 	<!-- ***** Footer Start ***** -->
 	<footer>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-5 col-md-12 col-sm-12">
 					<img src="assets/images/logo-dark.png" class="logo" alt="">
-					<div class="text">Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper.</div>
+					<div class="text">Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a
+						feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper.</div>
 				</div>
 				<div class="col-lg-2 col-md-4 col-sm-6 col-6">
 					<h5>Helpful Links</h5>
@@ -643,9 +689,23 @@
 	<script src="assets/js/waypoints.min.js"></script>
 	<script src="assets/js/jquery.counterup.min.js"></script>
 	<script src="assets/js/jquery.magnific-popup.min.js"></script>
-	<script src="assets/js/imgfix.min.js"></script>	
+	<script src="assets/js/imgfix.min.js"></script>
 
 	<!-- Global Init -->
 	<script src="assets/js/custom.js"></script>
+	<script>
+		function myFunction(event) {
+			var popup = document.getElementById("myPopup");
+			popup.classList.toggle("show");
+			event.stopPropagation(); // Stop the click event from bubbling up
+		}
+	
+		document.addEventListener('click', function(event) {
+			var popup = document.getElementById("myPopup");
+			if (event.target !== popup && !popup.contains(event.target)) {
+				popup.classList.remove("show");
+			}
+		});
+	</script>
 </body>
 </html>
