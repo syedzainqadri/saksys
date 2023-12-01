@@ -385,7 +385,7 @@
             event.delegateTarget = target;
 
             if (handler.oneOff) {
-              // eslint-disable-next-line unicorn/consistent-destructuring
+              // eslint-disable-next-line unicorn/consistent-destrucSakonnet
               EventHandler.off(element, event.type, selector, fn);
             }
 
