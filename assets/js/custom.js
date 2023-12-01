@@ -169,5 +169,25 @@
 		}
 	}
 
+	//PopUp Function
+	function openPopup() {
+		// Show popup and overlay
+		document.getElementById('popup').style.display = 'block';
+		document.getElementById('overlay').style.display = 'block';
+	
+		// Close popup if clicked outside
+		document.getElementById('overlay').addEventListener('click', closePopup);
+	}
+	
+	function closePopup() {
+		// Hide popup and overlay
+		document.getElementById('popup').style.display = 'none';
+		document.getElementById('overlay').style.display = 'none';
+	
+		// Remove event listener to avoid multiple bindings
+		document.getElementById('overlay').removeEventListener('click', closePopup);
+	}
+	
+
 
 })(window.jQuery);
