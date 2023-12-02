@@ -20,34 +20,6 @@
 
 	<!-- Custom CSS -->
 	<link href="assets/css/dark.css" rel="stylesheet" type="text/css">
-
-	<style>
-		.popup {
-			display: none;
-			position: top;
-			bottom: 20px;
-			padding: 20px;
-			background-color: #ffffff;
-			border: 1px solid #ddd;
-			width: 100%;
-			min-height: 250px;
-		}
-
-		/* Show the popup when the user clicks on the button */
-		.popup.show {
-			display: block;
-		}
-
-		/* Responsive styles */
-		@media (max-width: 768px) {
-			.popup {
-				width: 90%;
-				/* Adjust as needed */
-				padding: 10px;
-				/* Adjust as needed */
-			}
-		}
-	</style>
 </head>
 
 <body>
@@ -108,6 +80,8 @@
 							<li><a class="btn-nav-primary" href="faq.html">Support</a></li>
 						</ul>
 						<!-- ***** Header Buttons End ***** -->
+						<!-- *create a burger menu *-->
+
 					</nav>
 				</div>
 			</div>
@@ -137,8 +111,10 @@
 						<p>Proven methods to capture business priorities and goals as well as current pain points that
 							enables measurable business outcomes.</p>
 						<button onclick="myFunction(event)" class="btn-primary-line">Let's Build</button>
+						<div id="myOverlay" class="overlay">
 						<div id="myPopup" class="popup">
 							<p>Some text in the Popup..</p>
+						</div>
 						</div>
 					</div>
 				</div>
@@ -696,16 +672,21 @@
 	<script>
 		function myFunction(event) {
 			var popup = document.getElementById("myPopup");
+			var overlay = document.getElementById("myOverlay");
 			popup.classList.toggle("show");
+			overlay.classList.toggle("show");
 			event.stopPropagation(); // Stop the click event from bubbling up
 		}
-	
-		document.addEventListener('click', function(event) {
+
+		document.addEventListener('click', function (event) {
 			var popup = document.getElementById("myPopup");
+			var overlay = document.getElementById("myOverlay");
 			if (event.target !== popup && !popup.contains(event.target)) {
 				popup.classList.remove("show");
+				overlay.classList.remove("show");
 			}
 		});
 	</script>
 </body>
+
 </html>
