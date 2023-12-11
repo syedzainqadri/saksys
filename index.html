@@ -138,22 +138,22 @@
 					<div class="col-lg-5 col-md-12 col-sm-12">
 						<h1>Industry Leading BPO and Staffing Solutions </h1>
 						<p>Take your business to new heights with trusted, tech-driven <strong>Staffing
-								Solutions</strong> & <strong>BPO Services</strong>. Let us guide you to <strong>Highly Productive Talent</strong> tailored to your specific needs.</p>
-								<!-- Partner with us to <em>add highly productive talent</em> that delivers measurable outcomes.</p> -->
+								Solutions</strong> & <strong>BPO Services</strong>. Let us guide you to <strong>Highly
+								Productive Talent</strong> tailored to your specific needs.</p>
 						<button onclick="myFunction(event)" class="btn-primary-line">LET'S TALK</button>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- ***** Header Text End ***** -->
-	<!-- ***** Play Button Start ***** -->
-	<div class="play-button-wrapper">
-		<a href="https://www.youtube.com/watch?v=dPZTh2NKTm4" class="btn-play">
-			<i class="fa fa-play"></i>
-		</a>
-	</div>
-	<!-- ***** Play Button End ***** -->
+
+		<!-- ***** Header Text End ***** -->
+		<!-- ***** Play Button Start ***** -->
+		<div class="play-button-wrapper">
+			<a href="https://www.youtube.com/watch?v=dPZTh2NKTm4" class="btn-play">
+				<i class="fa fa-play"></i>
+			</a>
+		</div>
+		<!-- ***** Play Button End ***** -->
 	</div>
 	<!-- ***** Welcome Area End ***** -->
 
@@ -172,7 +172,8 @@
 									<i class="fa fa-tasks"></i>
 								</div>
 								<h5 class="features-title">Project Base Solutions</h5>
-								<p>A dedicated team with reliable mainstream skill sets that integrate seamlessly into your organization.</p>
+								<p>A dedicated team with reliable mainstream skill sets that integrate seamlessly into
+									your organization.</p>
 							</a>
 						</div>
 						<!-- ***** Features Small Item End ***** -->
@@ -691,7 +692,8 @@
 								<input type="email" class="form-control" name="email"
 									placeholder="Subscribe to our news letter" required
 									style="width: 500px; border-radius: 20px;">
-								<a onclick="subscribe()" type="submit" class="btn-white-line" style="margin: 4px 2px;">Subscribe</a>
+								<a onclick="subscribe()" type="submit" class="btn-white-line"
+									style="margin: 4px 2px;">Subscribe</a>
 							</div>
 						</form>
 						<!-- <form id="subscribe-form">
@@ -708,7 +710,7 @@
 		</div>
 	</section>
 	<!-- ***** News Letter Parallax End ***** -->
-	
+
 
 	<!-- ***** Footer Start ***** -->
 	<footer>
@@ -824,34 +826,34 @@
 			// 	}
 			// 	console.log('Message sent: %s', info.messageId);
 			// });
-			
+
 		});
 
 		function subscribe() {
-    console.log('subscribeForm clicked');
+			console.log('subscribeForm clicked');
 
-    let email = document.querySelector('input[name="email"]').value;
-    console.log(email);
+			let email = document.querySelector('input[name="email"]').value;
+			console.log(email);
 
-    const options = {
-        method: 'POST',
-        headers: {
-            accept: 'application/json',
-            'content-type': 'application/json',
-            'api-key': ''
-        },
-        body: JSON.stringify({
-            email: email,
-            updateEnabled: false
-        })
-    };
+			const options = {
+				method: 'POST',
+				headers: {
+					accept: 'application/json',
+					'content-type': 'application/json',
+					'api-key': ''
+				},
+				body: JSON.stringify({
+					email: email,
+					updateEnabled: false
+				})
+			};
 
-    fetch('https://api.brevo.com/v3/contacts', options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
-}
-		
+			fetch('https://api.brevo.com/v3/contacts', options)
+				.then(response => response.json())
+				.then(response => console.log(response))
+				.catch(err => console.error(err));
+		}
+
 	</script>
 </body>
 
