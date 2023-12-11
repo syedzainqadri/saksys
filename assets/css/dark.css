@@ -1359,7 +1359,7 @@ parallax
   height: 140%;
   opacity: 0.88;
   background-image: linear-gradient(127deg, #29323C 0%, #485563 91%);
-  z-index: 2;
+  z-index: 3;
   top: -20%;
   left: -20%;
 }
