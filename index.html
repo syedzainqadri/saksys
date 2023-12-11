@@ -688,8 +688,14 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<form id="subscribe-form">
-							<input type="email" name="email" placeholder="Enter your email" required>
-							<button type="submit">Subscribe</button>
+							<!-- <input type="email" name="email" placeholder="Enter your email" required>
+							<button type="submit">Subscribe</button> -->
+							<div style="display: flex; justify-content: center; align-items: center; gap: 50px;">
+								<input type="email" class="form-control" name="email"
+									placeholder="Subscribe to our news letter" required
+									style="width: 500px; border-radius: 20px;">
+								<a onclick="submit" type="submit" class="btn-white-line" style="margin: 4px 2px;">Subscribe</a>
+							</div>
 						</form>
 						<!-- <form id="subscribe-form">
 							<div style="display: flex; justify-content: center; align-items: center; gap: 50px;">
@@ -705,6 +711,7 @@
 		</div>
 	</section>
 	<!-- ***** News Letter Parallax End ***** -->
+	
 
 	<!-- ***** Footer Start ***** -->
 	<footer>
