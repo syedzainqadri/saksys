@@ -191,3 +191,19 @@
 
 
 })(window.jQuery);
+
+
+
+function updateImageSources() {
+    const images = document.querySelectorAll('.responsive-image');
+
+    images.forEach(image => {
+        if (window.innerWidth < 768) {
+            // Modify this line to construct the path to the mobile image
+            image.src = image.src.replace('D:\Sakonnet\Git Repos\saksys\assets\images\photos', 'D:\Sakonnet\Git Repos\saksys\assets\images\photosM');
+        } else {
+            // Modify this line to construct the path to the desktop image
+            image.src = image.src.replace('D:\Sakonnet\Git Repos\saksys\assets\images\photosM', 'D:\Sakonnet\Git Repos\saksys\assets\images\photos');
+        }
+    });
+}
