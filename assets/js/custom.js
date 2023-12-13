@@ -204,3 +204,11 @@ window.addEventListener('load', function() {
         if (d.head) d.head.appendChild(s);
     })(document, window, 'BrevoConversations');
 });
+
+window.addEventListener('load', function() {
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+
+	gtag('config', 'G-6MBDKLFZLJ');
+});
