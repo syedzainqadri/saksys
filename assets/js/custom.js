@@ -9,6 +9,7 @@
 	mobileNav();
 
 
+
 	// Scroll animation init
 	window.sr = new scrollReveal();
 	
@@ -169,6 +170,74 @@
 		}
 	}
 
+	
+	
+
+
+})(window.jQuery);
+
+//PopUp Function
+function openPopup() {
+	// Show popup and overlay
+	document.getElementById('popup').style.display = 'block';
+	document.getElementById('overlay').style.display = 'block';
+
+	// Close popup if clicked outside
+	document.getElementById('overlay').addEventListener('click', closePopup);
+}
+
+function closePopup() {
+	// Hide popup and overlay
+	document.getElementById('popup').style.display = 'none';
+	document.getElementById('overlay').style.display = 'none';
+
+	// Remove event listener to avoid multiple bindings
+	document.getElementById('overlay').removeEventListener('click', closePopup);
+}
+
+function myFunction(event) {
+	var popup = document.getElementById("myPopup");
+	var overlay = document.getElementById("myOverlay");
+	popup.classList.toggle("show");
+	overlay.classList.toggle("show");
+	event.stopPropagation(); // Stop the click event from bubbling up
+}
+
+document.addEventListener('click', function (event) {
+	var popup = document.getElementById("myPopup");
+	var overlay = document.getElementById("myOverlay");
+	if (event.target !== popup && !popup.contains(event.target)) {
+		popup.classList.remove("show");
+		overlay.classList.remove("show");
+	}
+
+
+});
+
+function subscribe() {
+	console.log('subscribeForm clicked');
+
+	let email = document.querySelector('input[name="email"]').value;
+	console.log(email);
+
+	const options = {
+		method: 'POST',
+		headers: {
+			accept: 'application/json',
+			'content-type': 'application/json',
+			'api-key': ''
+		},
+		body: JSON.stringify({
+			email: email,
+			updateEnabled: false
+		})
+	};
+
+	fetch('https://api.brevo.com/v3/contacts', options)
+		.then(response => response.json())
+		.then(response => console.log(response))
+		.catch(err => console.error(err));
+}
 	//PopUp Function
 	function openPopup() {
 		// Show popup and overlay
