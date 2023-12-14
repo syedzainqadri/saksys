@@ -3,17 +3,17 @@
 
 
 <head>
-	
+
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6MBDKLFZLJ" defer></script>
 	<script>
-		window.addEventListener('load', function() {
+		window.addEventListener('load', function () {
 			window.dataLayer = window.dataLayer || [];
 			function gtag() { dataLayer.push(arguments); }
 			gtag('js', new Date());
 			gtag('config', 'G-6MBDKLFZLJ');
 		});
 	</script>
-	
+
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,8 +33,8 @@
 
 	<!-- Custom CSS -->
 	<link href="assets/css/dark.css" rel="stylesheet" type="text/css">
-	
-	
+
+
 </head>
 
 <body>
@@ -75,7 +75,7 @@
 							<span>Menu</span>
 						</a>
 						<!-- ***** Menu End ***** -->
-						
+
 						<ul class="header-buttons">
 							<li><a class="btn-nav-line" href="tel:+14152128310">Call us NOW!</a></li>
 							<li><button onclick="myFunction(event)" class="btn-nav-primary">Book an Appointment</button>
@@ -431,7 +431,13 @@
 				<div class="col-lg-3 col-md-6 col-sm-12">
 					<div class="team-item">
 						<div class="user-image">
-							<img src="assets/images/photos/team/2.webp" alt="">
+							<picture>
+								<source media="(max-width:768px)" srcset="assets/images/photosMobile/team/2.webp">
+								<source media="(min-width:769px)" srcset="assets/images/photos/team/2.webp">
+								 <img
+									src="assets/images/photos/team/2.webp" alt=""> 
+							</picture>
+
 						</div>
 						<div class="team-content">
 							<div class="team-info">
@@ -540,50 +546,54 @@
 						<div class="img blog-image-1"></div> <!-- Changed here -->
 						<div class="blog-content">
 							<h3>
-								<a href="blog-single.html">Navigating the Complexities of Technical Staffing: A Comprehensive Guide</a>
+								<a href="blog-single.html">Navigating the Complexities of Technical Staffing: A
+									Comprehensive Guide</a>
 							</h3>
 							<div class="text">
-								Discover how Sakonnet simplifies Technical staffing, addressing common challenges and offering expert solutions for businesses seeking top-tier talent.
+								Discover how Sakonnet simplifies Technical staffing, addressing common challenges and
+								offering expert solutions for businesses seeking top-tier talent.
 							</div>
 							<a href="blog-single.html" class="btn-primary-line">Read More</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			
-				<div class="col-lg-4 col-md-6 col-sm-12">
-					<div class="blog-post-thumb">
-						<div class="img">
-							<img src="assets/images/photos/blog/2.webp" alt="">
+
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="blog-post-thumb">
+					<div class="img">
+						<img src="assets/images/photos/blog/2.webp" alt="">
+					</div>
+					<div class="blog-content">
+						<h3>
+							<a href="blog-single.html">Overcoming Outsourcing Anxieties: Trust and Transparency in
+								BPO</a>
+						</h3>
+						<div class="text">
+							Learn how Sakonnet ensures trust and transparency in BPO services, mitigating common
+							fears associated with outsourcing critical business processes.
 						</div>
-						<div class="blog-content">
-							<h3>
-								<a href="blog-single.html">Overcoming Outsourcing Anxieties: Trust and Transparency in
-									BPO</a>
-							</h3>
-							<div class="text">
-								Learn how Sakonnet ensures trust and transparency in BPO services, mitigating common
-								fears associated with outsourcing critical business processes.
-							</div>
-							<a href="blog-single.html" class="btn-primary-line">Read More</a>
-						</div>
+						<a href="blog-single.html" class="btn-primary-line">Read More</a>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6 col-sm-12">
-					<div class="blog-post-thumb">
-						<div class="img blog-image-3"></div> <!-- Changed here -->
-						<div class="blog-content">
-							<h3>
-								<a href="blog-single.html">The Future of Work: Embracing Remote Teams in the Post-Pandemic Era</a>
-							</h3>
-							<div class="text">
-								Sakonnet shares expert, fostering, and effective insights on the evolving work landscape and how businesses can successfully integrate remote teams for long-term success.
-							</div>
-							<a href="blog-single.html" class="btn-primary-line">Read More</a>
-						</div>
-					</div>
-				</div>				
 			</div>
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="blog-post-thumb">
+					<div class="img blog-image-3"></div> <!-- Changed here -->
+					<div class="blog-content">
+						<h3>
+							<a href="blog-single.html">The Future of Work: Embracing Remote Teams in the Post-Pandemic
+								Era</a>
+						</h3>
+						<div class="text">
+							Sakonnet shares expert, fostering, and effective insights on the evolving work landscape and
+							how businesses can successfully integrate remote teams for long-term success.
+						</div>
+						<a href="blog-single.html" class="btn-primary-line">Read More</a>
+					</div>
+				</div>
+			</div>
+		</div>
 		</div>
 	</section>
 	<!-- ***** Blog End ***** -->
@@ -657,7 +667,8 @@
 						<p>Phone: (415) 212-8310</p>
 						<p><span>E-Mail:</span><a href="mailto:info@saksys.com" target="_blank">info@saksys.com</a></p>
 						<ul class="social">
-							<li><a href="https://web.facebook.com/sakonnetsystems" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+							<li><a href="https://web.facebook.com/sakonnetsystems" target="_blank"><i
+										class="fa fa-facebook-square"></i></a></li>
 							<li><a href="https://twitter.com/SakonnetSystems"><i class="fa fa-twitter-square"></i></a>
 							</li>
 							<li><a href="https://www.linkedin.com/company/sakonnet-systems/" target="_blank"><i
