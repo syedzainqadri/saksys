@@ -187,6 +187,50 @@
 		// Remove event listener to avoid multiple bindings
 		document.getElementById('overlay').removeEventListener('click', closePopup);
 	}
+
+	function myFunction(event) {
+		var popup = document.getElementById("myPopup");
+		var overlay = document.getElementById("myOverlay");
+		popup.classList.toggle("show");
+		overlay.classList.toggle("show");
+		event.stopPropagation(); // Stop the click event from bubbling up
+	}
+
+	document.addEventListener('click', function (event) {
+		var popup = document.getElementById("myPopup");
+		var overlay = document.getElementById("myOverlay");
+		if (event.target !== popup && !popup.contains(event.target)) {
+			popup.classList.remove("show");
+			overlay.classList.remove("show");
+		}
+
+
+	});
+
+	function subscribe() {
+		console.log('subscribeForm clicked');
+
+		let email = document.querySelector('input[name="email"]').value;
+		console.log(email);
+
+		const options = {
+			method: 'POST',
+			headers: {
+				accept: 'application/json',
+				'content-type': 'application/json',
+				'api-key': ''
+			},
+			body: JSON.stringify({
+				email: email,
+				updateEnabled: false
+			})
+		};
+
+		fetch('https://api.brevo.com/v3/contacts', options)
+			.then(response => response.json())
+			.then(response => console.log(response))
+			.catch(err => console.error(err));
+	}
 	
 
 
