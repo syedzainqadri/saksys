@@ -259,5 +259,4 @@ function subscribe() {
 	
 
 
-})(window.jQuery);
 
